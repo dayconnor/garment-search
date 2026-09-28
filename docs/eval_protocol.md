@@ -187,8 +187,11 @@ Fixed in advance so configuration choices aren't tuned against the eval set.
 
 - **Primary model:** FashionCLIP (`patrickjohncyh/fashion-clip`), a CLIP
   checkpoint adapted to fashion imagery.
-- **Baseline comparator:** OpenAI CLIP ViT-B/32 through `open_clip`, zero-shot.
-  Both run against the identical corpus, queries, and predicates. Whether the
+- **Baseline comparator:** OpenAI CLIP ViT-B/32 (`openai/clip-vit-base-patch32`),
+  zero-shot. Both models load through Hugging Face `transformers` and run through
+  the identical loading, preprocessing and embedding code, so any difference in
+  results comes from the weights rather than from two libraries preparing images
+  differently. Both run against the identical corpus, queries, and predicates. Whether the
   fashion-specific model actually beats general CLIP is a real finding either
   way, and committing to report it now keeps the comparison from quietly
   disappearing if the domain-specific model loses.
@@ -546,3 +549,4 @@ Every entry has to record the date, what changed, and why.
 | 2026-09-20 | §6 B6, B7 | Denim now comes from nickname `36:jeans`. B6 accepts `297:distressed`, `300:frayed`, `298:washed`. B7 accepts `131:baggy`, `132:wide leg`, `137:loose (fit)`, `138:oversized`. | No denim material attribute exists. The finishing set matches the prose criterion, which already names fraying and heavy fading, so `distressed` alone would have been stricter than the criterion it formalizes. |
 | 2026-09-20 | §6 (all others) | `[VERIFY]` markers removed and replaced with confirmed category and attribute IDs. | Names matched the real label set with no change in meaning. |
 | 2026-09-28 | §2 | Added the indexed-set count the rule actually produces, n = 45,622, and named the one dropped image. The "n = 45,623" is now labeled as the count in the file. | Clarification only. The inclusion rule is unchanged. The original text gave the file's image count next to the rule, which read as if every image were indexed. Recorded after `pipeline/02_build_dataset.py` ran, and before any embedding or retrieval. |
+| 2026-09-28 | §5 | The baseline now loads through `transformers` (`openai/clip-vit-base-patch32`) instead of `open_clip`. Same model and weights. | FashionCLIP is only distributed in `transformers` format, with no `open_clip` config. Loading both models through one library means they share identical preprocessing and embedding code, so the comparison isolates the weights. Recorded before any embedding or retrieval. |
