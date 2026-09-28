@@ -40,10 +40,12 @@ README's "Data and licensing" section covers why, including the parts of
 Fashionpedia's terms that are stricter than they look at first.
 
 - **Indexed set:** every image in `instances_attributes_train2020.json`
-  (n = 45,623) that carries at least one instance annotation in one of the 27
-  *main apparel* categories. Images annotated only with apparel *parts*, like a
-  lone `sleeve` mask, are left out, since a query like "a cardigan" has no
-  sensible answer in an image like that.
+  (n = 45,623 in the file) that carries at least one instance annotation in one
+  of the 27 *main apparel* categories. Images annotated only with apparel
+  *parts*, like a lone `sleeve` mask, are left out, since a query like "a
+  cardigan" has no sensible answer in an image like that. Applying that rule
+  leaves **n = 45,622** indexed images. Exactly one image is dropped (id 1870,
+  annotated only with `neckline`, `sleeve`, `sleeve`).
 - **Held out and not indexed:** `val2020` (n = 1,158). Nothing is trained here,
   CLIP is used zero-shot, so this is not a leakage control. I'm keeping it as a
   clean set for a later crop-level or fine-tuned variant, so that variant can be
@@ -543,3 +545,4 @@ Every entry has to record the date, what changed, and why.
 | 2026-09-20 | §6 B1 | Predicate now names length attribute `156:sleeveless` instead of a "sleeve-type attribute". | `sleeveless` sits under the length super-category. Same target, wrong group named in the original wording. |
 | 2026-09-20 | §6 B6, B7 | Denim now comes from nickname `36:jeans`. B6 accepts `297:distressed`, `300:frayed`, `298:washed`. B7 accepts `131:baggy`, `132:wide leg`, `137:loose (fit)`, `138:oversized`. | No denim material attribute exists. The finishing set matches the prose criterion, which already names fraying and heavy fading, so `distressed` alone would have been stricter than the criterion it formalizes. |
 | 2026-09-20 | §6 (all others) | `[VERIFY]` markers removed and replaced with confirmed category and attribute IDs. | Names matched the real label set with no change in meaning. |
+| 2026-09-28 | §2 | Added the indexed-set count the rule actually produces, n = 45,622, and named the one dropped image. The "n = 45,623" is now labeled as the count in the file. | Clarification only. The inclusion rule is unchanged. The original text gave the file's image count next to the rule, which read as if every image were indexed. Recorded after `pipeline/02_build_dataset.py` ran, and before any embedding or retrieval. |
