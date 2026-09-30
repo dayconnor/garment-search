@@ -1,0 +1,14 @@
+{
+  "fashion_clip": {
+    "repo_id": "patrickjohncyh/fashion-clip",
+    "revision": "7e3ba62ce16b379a1ab479346b66f192e76f51b7",
+    "n_images": 45622,
+    "dim": 512
+  },
+  "clip_vit_b32": {
+    "repo_id": "openai/clip-vit-base-patch32",
+    "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "n_images": 45622,
+    "dim": 512
+  }
+}
