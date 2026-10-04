@@ -277,12 +277,18 @@ score.*
 - **Relevant:** a dress with no sleeves, so shoulders or arms are bare.
   Strapless, spaghetti-strap, tank and halter all count. Short sleeves score 0,
   and a sleeveless *top* that isn't a dress scores 0.
-- **Predicate:** `category == "dress"` (10) AND length attribute
+- **Predicate:** image contains an instance with `category == "dress"` (10),
+  AND an instance with `category == "sleeve"` (31) carrying length attribute
   `156:sleeveless`.
 - **Note, recorded in advance:** `sleeveless` sits under the *length*
   super-category in Fashionpedia, not under any sleeve-type group. Same target,
   and the `[VERIFY]` wording I originally wrote for this predicate named the
   wrong group.
+- **Known gap (amended 2026-10-04, see §9):** Fashionpedia attaches `156` to the
+  `sleeve` *part* instance, not to the garment, so the predicate is image-level
+  like Tier C. It can't confirm that the sleeveless sleeve belongs to the dress
+  rather than to another garment in the same photo. Manual precision@10 (§3.2)
+  grades that.
 
 **B2. `striped shirt`**
 - **Relevant:** a shirt or blouse with a stripe pattern, in any stripe
@@ -550,3 +556,4 @@ Every entry has to record the date, what changed, and why.
 | 2026-09-20 | §6 (all others) | `[VERIFY]` markers removed and replaced with confirmed category and attribute IDs. | Names matched the real label set with no change in meaning. |
 | 2026-09-28 | §2 | Added the indexed-set count the rule actually produces, n = 45,622, and named the one dropped image. The "n = 45,623" is now labeled as the count in the file. | Clarification only. The inclusion rule is unchanged. The original text gave the file's image count next to the rule, which read as if every image were indexed. Recorded after `pipeline/02_build_dataset.py` ran, and before any embedding or retrieval. |
 | 2026-09-28 | §5 | The baseline now loads through `transformers` (`openai/clip-vit-base-patch32`) instead of `open_clip`. Same model and weights. | FashionCLIP is only distributed in `transformers` format, with no `open_clip` config. Loading both models through one library means they share identical preprocessing and embedding code, so the comparison isolates the weights. Recorded before any embedding or retrieval. |
+| 2026-10-04 | §6 B1 | Predicate changed from `dress` (10) AND `156:sleeveless` on the same instance to an image-level conjunction: a `dress` (10) instance AND a `sleeve` (31) instance carrying `156:sleeveless`. `\|R\|` goes from 1 to 112. Prose criterion unchanged. | Counting `\|R\|` for every predicate showed `156` sits on the `sleeve` part instance (298 instances) and almost never on the garment (1 dress instance), so the original predicate matched a single image and could not grade the query. This corrects which instance the label is attached to, under the spirit of rule 1. Stated plainly per rule 6: rule 1's "before any retrieval is run" is not literally met, since a smoke test had already ranked images for four non-eval queries (`glasses`, `hat`, `tie`, `glove`). No retrieval for any §6 query had been run or observed. The image-level gap is recorded in B1's known-gap note. |
