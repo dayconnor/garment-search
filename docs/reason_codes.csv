@@ -1,0 +1,177 @@
+query_id,score,reason,reason_code
+A1,2,button up cardigan sweater,match
+A1,2,diamond pattern cardigan,match
+A1,2,knitted button up cardigan,match
+A1,2,knitted cardigan,match
+A1,2,pattern cardigan,match
+A1,2,polo ralph lauren cardigan,match
+A1,2,ralph lauren double r cardigan,match
+A1,2,yellow knitted cardigan,match
+A1,1,"knitted and buttoned in front, hard to see from this angle.",garment unclear
+A1,0,wrong garment. blazer.,wrong garment: blazer
+A1,0,wrong garment. coat.,wrong garment: coat
+A1,0,wrong garment. more like a bomber.,wrong garment: jacket
+A1,0,"wrong garment, knitted sweater.",wrong garment: sweater
+A2,2,black polka dot jumpsuit,match
+A2,2,black women's jumpsuit,match
+A2,2,denim jumpsuit,match
+A2,2,"gray denim overalls, categorized as a jumpsuit",match
+A2,2,jumpsuit with two colors/patterns,match
+A2,2,"jumpsuit, one connected piece with two colors/patterns",match
+A2,2,navy blue women's jumpsuit,match
+A2,2,red and white striped jumpsuit,match
+A2,2,women's black jumpsuit,match
+A2,2,women's navy jumpsuit,match
+A2,2,women's yellow floral jumpsuit,match
+A2,1,"romper, not full length trousers","romper, not jumpsuit"
+A2,1,"women's purple romper, trousers not full length","romper, not jumpsuit"
+A2,0,two disconnected garments,"separates, not jumpsuit"
+A2,0,"wrong garment, denim dress",wrong garment: dress
+A2,0,"wrong garment, women's gray dress",wrong garment: dress
+A3,2,burgundy shorts,match
+A3,2,cotton shorts,match
+A3,2,denim shorts,match
+A3,2,distressed denim shorts,match
+A3,2,dyed denim shorts,match
+A3,2,floral pattern shorts,match
+A3,2,gray cotton shorts,match
+A3,2,gray denim shorts,match
+A3,2,linen shorts,match
+A3,2,plaid shorts,match
+A3,2,red patterned shorts,match
+A3,2,track or exercise shorts,match
+A3,2,white cotton shorts,match
+A3,2,white denim shorts,match
+A4,2,beige tribal patterned scarf,match
+A4,2,black and white scarf,match
+A4,2,black knitted scarf,match
+A4,2,blue and white striped scarf,match
+A4,2,burgundy scarf,match
+A4,2,cotton scarf,match
+A4,2,gray knitted scarf,match
+A4,2,knitted glitter scarf,match
+A4,2,knitted scarf,match
+A4,2,lime green scarf,match
+A4,2,pink knitted scarf,match
+A4,2,pink scarf,match
+A4,2,red knitted scarf,match
+A4,2,shawl scarf,match
+A4,2,sports scarf,match
+A4,2,turquoise scarf,match
+A4,0,"wrong garment, knitted sleeveless turtle neck sweater",wrong garment: sweater
+A4,0,"wrong garment, knitted sweater",wrong garment: sweater
+A4,0,"wrong garment, patchwork vest",wrong garment: vest
+A5,2,black umbrella,match
+A5,2,black umbrella with white and red polka dots,match
+A5,2,clear umbrella,match
+A5,2,knitted umbrella,match
+A5,2,purple umbrella,match
+A5,2,"purple umbrella, galaxy design",match
+A5,2,red umbrella,match
+A5,2,"two umbrellas, yellow and red",match
+A5,2,yellow and white umbrella,match
+B1,2,black and white sleeveless dress,match
+B1,2,black sleeveless dress,match
+B1,2,black/navy sleeveless dress,match
+B1,2,brown sleeveless dress,match
+B1,2,patterned sleeveless dress,match
+B1,2,purple and black pleated sleeveless dress,match
+B1,2,red sleeveless dress,match
+B1,2,white sleeveless dress,match
+B1,2,"white sleeveless dress with black, gray, and white strap around chest",match
+B1,1,"sleeveless dress, cuffs on arms can be considered a sleeve",sleeve unclear
+B2,2,black and white stripe shirt,match
+B2,2,"black and white striped blouse, split in half with vertical and horizontal stripes",match
+B2,2,black and white vertical striped shirt,match
+B2,2,"black oxford shirt with red and white stripes, vertical and horizontal",match
+B2,2,blue and white striped oxford shirt,match
+B2,2,gold and white stripe shirt,match
+B2,2,lauren by ralph lauren navy and white stripe shirt,match
+B2,2,navy and white striped longsleeve shirt,match
+B2,2,navy shirt with white horizontal stripes,match
+B2,2,orange and blue horizontally striped shirt,match
+B2,2,orange and white horizontally striped shirt,match
+B2,2,"polo ralph lauren lilac, green, red, and navy horizontally striped oxford shirt",match
+B2,2,polo ralph lauren multicolored striped shirt,match
+B2,2,red and white horizontal stripe longsleeve shirt,match
+B2,2,red and white striped oxford shirt,match
+B2,2,"red, white, yellow, and blue striped shirt",match
+B2,2,"white and blue horizontally striped shirt, with denim pockets",match
+B2,2,white and gray vertical striped oxford,match
+B2,2,white oxford shirt with olive and blue stripes,match
+B2,2,"white oxford shirt with red, blue, and yellow vertical stripes",match
+B2,2,white oxford shirt with vertical black stripes,match
+B2,2,white shirt with black horizontal stripes,match
+B2,2,white shirt with navy stripes,match
+B2,2,"white shirt with red, blue, and yellow vertical stripes",match
+B2,1,"red and white striped t shirt, cropped at chest","striped tee, not shirt"
+B2,1,"white long sleeve shirt with black horizontal stripes, but has turtle neck","striped top, not shirt"
+B2,0,"wrong garment, striped dress under a plaid shirt",wrong garment: dress
+B2,0,"wrong garment, striped poncho or jacket",wrong garment: outerwear
+B2,0,"wrong garment, pants are striped not top",wrong garment: pants
+B3,2,black high waisted pants,high waist
+B3,2,black high waisted wide pants,high waist
+B3,2,high waisted denim,high waist
+B3,2,high waisted olive pants,high waist
+B3,2,high waisted pants,high waist
+B3,2,high waisted red pants,high waist
+B3,1,"pants, unsure if high waisted based on body proportions",waist position unclear
+B3,0,low rise pants,low rise
+B3,0,mid rise brown denim,mid rise
+B3,0,mid rise pants,mid rise
+B3,0,not high waisted pants,not high waisted
+B3,0,"wrong garment, orange jumpsuit",not pants
+B4,2,black and brown fur coat,fur
+B4,2,black fur coat,fur
+B4,2,blue fur coat,fur
+B4,2,brown fur coat,fur
+B4,2,gray cropped fur coat,fur
+B4,2,gray fur coat,fur
+B4,2,light brown fur coat,fur
+B4,1,"fur jacket with fur trim on hood and pockets, not a coat","fur jacket, not coat"
+B4,0,"wrong garment, cheetah print jacket",wrong garment: animal print jacket
+B4,0,"wrong garment, fur vest or ponch or jacket",wrong garment: vest or shawl
+B4,0,"wrong garment, fur vest or shawl",wrong garment: vest or shawl
+B5,2,black dress with pink and red floral print,match
+B5,2,"black dress with white, pink, and red floral print",match
+B5,2,"black floral print dress with red, pink, and white flowers",match
+B5,2,"floral print dress with red, purple, and white flowers",match
+B5,2,minimalist floral print,match
+B5,2,navy and pink floral print dress,match
+B5,2,navy dress with pink floral print,match
+B5,2,pink dress with white floral print,match
+B5,2,pink rose floral print dress,match
+B5,2,red dress with white floral print,match
+B5,2,"red, blue, and yellow floral print dress",match
+B5,2,"red, green, and blue floral print dress",match
+B5,2,rose floral print dress,match
+B5,2,white dress with pink floral print,match
+B5,2,white dress with red rose floral print,match
+B5,0,butterfly print,wrong pattern
+B6,2,distressed slim denim,distressed
+B6,2,distressing along thigh and knee area,distressed
+B6,2,"distressing at knee and thigh area, heavy fading throughout",distressed
+B6,2,distressing below knee area and heavy fading near thigh area,distressed
+B6,2,distressing on knee and thigh arera,distressed
+B6,2,"distressing on left thigh area, repairs on right outer leg",distressed
+B6,2,"distressing throughout front of denim, from upper thigh to ankle",distressed
+B6,2,large distressing at knee and thigh area,distressed
+B6,2,heavy fading,heavy fade
+B6,2,rips above knee area,rips
+B6,2,rips at knee,rips
+B6,2,rips at knee and lower leg,rips
+B6,2,rips at knee and right thigh area,rips
+B6,2,rips from thigh area down to ankle,rips
+B6,2,rips near knee area,rips
+B6,0,clean denim and wash,clean denim
+B6,0,denim not distressed,clean denim
+C2,1,"blazer, no t-shirt","blazer, not t-shirt"
+D4,2,"goth: accessories, leather jacket, layering, skirt",goth
+D4,2,"goth: accessories, patterned dress relies on texture",goth
+D4,2,"goth: all black, jacket, leggings, boots,",goth
+D4,2,"goth: black, leather pieces, dyed hair, boots",goth
+D4,2,"goth: boots, elongated sleeveless dress, thin layering",goth
+D4,2,"goth: layering, all black, boots, leggings",goth
+D4,2,"goth: leather jacket, layering, accessories, boots",goth
+D4,2,"goth: leather jacket, punk t-shirt, boots, thin black leggings",goth
+D4,0,not predominantly black,not black
