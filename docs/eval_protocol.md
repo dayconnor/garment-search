@@ -113,12 +113,12 @@ Judging procedure, fixed in advance:
   on my word.
 
 **Single-judge limitation.** I make all the judgments
-myself andmknow what the system is supposed to do. There is no second
+myself and know what the system is supposed to do. There is no second
 annotator, so there is no inter-rater agreement statistic. It is important to
 note that this is a real weakness of the secondary metric, and it carries into
 the README's limitations section. The
 mitigations are the ones a single judge has available: the criteria were written
-before any output existed, the rubric is fixed, and the judging is blndly ranked.
+before any output existed, the rubric is fixed, and the judging is blindly ranked.
 
 ### 3.3 Tier D queries have no metadata ground truth
 
