@@ -62,7 +62,7 @@ def add_sparsity_gap(precision_df, metrics_df):
 
     return gap_df
 
-def build_crosstab(judgments_df):
+def label_pairs(judgments_df):
     instances_df = pd.read_csv(instances_path)
     attributes_df = pd.read_csv(attributes_path)
 
@@ -74,6 +74,11 @@ def build_crosstab(judgments_df):
     pairs_df['tier'] = pairs_df['query_id'].str[0]
     pairs_df['is_relevant'] = [image_id in relevant[query_id] for query_id, image_id in zip(pairs_df['query_id'], pairs_df['image_id'])]
 
+    return pairs_df
+
+def build_crosstab(judgments_df):
+    pairs_df = label_pairs(judgments_df)
+
     crosstab_df = pd.crosstab([pairs_df['tier'], pairs_df['query_id'], pairs_df['is_relevant']], pairs_df['score'])
     crosstab_df = crosstab_df.reindex(columns=scores, fill_value=0).add_prefix('score_').reset_index()
 
@@ -82,13 +87,15 @@ def build_crosstab(judgments_df):
 
     return crosstab_df, overall_df
 
-def count_reasons(judgments_df):
-    # normalize case and whitespace before grouping
-    reason_df = judgments_df.assign(reason=judgments_df['reason'].str.lower().str.strip())
+def add_reason_codes(df):
+    # normalize case and whitespace before matching
+    reason_df = df.assign(reason=df['reason'].str.lower().str.strip())
 
     # post-hoc coding of the free-text reasons, written after scoring and without changing any score.
     # the judgment log stays as written; reasons with no code row are already in the standard wording
     codes_df = pd.read_csv(reason_codes_path, dtype={'score': 'Int64', 'reason': 'string'})
+    # only the queries in df, so a Tier A/B/C subset doesn't flag Tier D codes as stale
+    codes_df = codes_df[codes_df['query_id'].isin(reason_df['query_id'])]
     reason_df = reason_df.merge(codes_df, on=['query_id', 'score', 'reason'], how='left', validate='m:1', indicator=True)
 
     # a code row that matches nothing means a score or reason changed after coding
@@ -97,6 +104,11 @@ def count_reasons(judgments_df):
 
     reason_df['reason_code'] = reason_df['reason_code'].fillna(reason_df['reason'])
     print(f"reasons: n = {len(reason_df)}, coded from {reason_codes_path.name} = {(reason_df['_merge'] == 'both').sum()}")
+
+    return reason_df.drop(columns='_merge')
+
+def count_reasons(judgments_df):
+    reason_df = add_reason_codes(judgments_df)
 
     return (reason_df.groupby(['query_id', 'score', 'reason_code']).size().reset_index(name='n')
             .sort_values(['query_id', 'score', 'n'], ascending=[True, False, False]))
