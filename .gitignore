@@ -24,6 +24,3 @@ data/processed/*.index
 # Claude
 .claude/
 CLAUDE.md
-
-# README (for now)
-README.md
