@@ -1,0 +1,83 @@
+query_id,score,reason_code,n
+A1,2,match,15
+A1,1,garment unclear,1
+A1,0,wrong garment: blazer,1
+A1,0,wrong garment: coat,1
+A1,0,wrong garment: jacket,1
+A1,0,wrong garment: sweater,1
+A2,2,match,11
+A2,1,"romper, not jumpsuit",2
+A2,0,"separates, not jumpsuit",3
+A2,0,wrong garment: dress,2
+A3,2,match,19
+A4,2,match,17
+A4,0,wrong garment: sweater,2
+A4,0,wrong garment: vest,1
+A5,2,match,17
+B1,2,match,18
+B1,1,sleeve unclear,1
+B2,2,match,24
+B2,1,"striped tee, not shirt",1
+B2,1,"striped top, not shirt",1
+B2,0,wrong garment: dress,1
+B2,0,wrong garment: outerwear,1
+B2,0,wrong garment: pants,1
+B3,2,high waist,11
+B3,1,waist position unclear,1
+B3,0,mid rise,5
+B3,0,not high waisted,3
+B3,0,low rise,1
+B3,0,not pants,1
+B4,2,fur,14
+B4,1,"fur jacket, not coat",8
+B4,0,wrong garment: vest or shawl,2
+B4,0,wrong garment: animal print jacket,1
+B5,2,match,16
+B5,1,"embroidered, not print",1
+B5,0,wrong pattern,1
+B6,2,distressed,9
+B6,2,rips,6
+B6,2,heavy fade,1
+B6,0,clean denim,2
+B7,2,wide leg,5
+B7,2,baggy cut,2
+B7,1,fit unclear from pose,1
+B7,0,straight leg,6
+B7,0,slim fit,3
+B7,0,not denim,1
+C1,2,skinny jeans + boots,12
+C1,1,"skinny jeans, no boots",5
+C1,1,"skinny jeans, footwear unclear",1
+C1,0,neither,1
+C2,2,blazer + white tee,8
+C2,1,"blazer, not t-shirt",7
+C2,1,"blazer, no top",2
+C2,1,"white tee, no blazer",1
+C2,0,neither,1
+C3,2,long coat + scarf,3
+C3,1,"scarf, coat too short",8
+C3,1,"long coat, no scarf",2
+C3,1,"scarf, coat length unclear",1
+C3,0,neither,5
+C4,1,fit partly hidden,2
+C4,0,no blazer,8
+C4,0,fitted blazer,6
+C4,0,slightly large,3
+D1,2,all black,14
+D1,0,non-black garment,2
+D2,2,business casual,14
+D2,2,office dress,2
+D2,1,half casual,1
+D2,1,too short or revealing,1
+D2,0,wrong occasion,1
+D3,2,cover-up,5
+D3,2,swimwear,4
+D3,2,summer dress,3
+D3,1,"summery, not beach",6
+D3,1,swim or lingerie unclear,1
+D3,0,not beachwear,1
+D4,2,goth,8
+D4,1,"black, one signal",3
+D4,1,outfit partly hidden,1
+D4,0,"black, other style",3
+D4,0,not black,2
