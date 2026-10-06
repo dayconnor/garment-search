@@ -8,7 +8,7 @@ A,A4,False,3,0,0
 A,A4,True,0,0,17
 A,A5,True,0,0,17
 B,B1,False,0,1,18
-B,B2,False,3,2,9
+B,B2,False,3,10,1
 B,B2,True,0,0,15
 B,B3,False,10,0,6
 B,B3,True,0,1,5

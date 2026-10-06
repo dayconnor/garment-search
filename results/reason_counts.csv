@@ -16,8 +16,8 @@ A4,0,wrong garment: vest,1
 A5,2,match,17
 B1,2,match,18
 B1,1,sleeve unclear,1
-B2,2,match,24
-B2,1,"striped tee, not shirt",1
+B2,2,match,16
+B2,1,"striped tee, not shirt",9
 B2,1,"striped top, not shirt",1
 B2,0,wrong garment: dress,1
 B2,0,wrong garment: outerwear,1

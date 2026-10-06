@@ -1,6 +1,6 @@
 model_key,condition,query_id,tier,strict_precision@10,lenient_precision@10,n_relevant,capped_recall@10,strict_gap,lenient_gap
 clip_vit_b32,category_filter,B1,B,0.9,1.0,112.0,0.0,0.9,1.0
-clip_vit_b32,category_filter,B2,B,0.9,0.9,303.0,0.6,0.30000000000000004,0.30000000000000004
+clip_vit_b32,category_filter,B2,B,0.7,0.9,303.0,0.6,0.09999999999999998,0.30000000000000004
 clip_vit_b32,category_filter,B3,B,0.5,0.5,622.0,0.3,0.2,0.2
 clip_vit_b32,category_filter,B4,B,0.6,0.9,379.0,0.9,-0.30000000000000004,0.0
 clip_vit_b32,category_filter,B5,B,0.9,0.9,2038.0,1.0,-0.09999999999999998,-0.09999999999999998
@@ -12,7 +12,7 @@ clip_vit_b32,unfiltered,A3,A,1.0,1.0,2745.0,1.0,0.0,0.0
 clip_vit_b32,unfiltered,A4,A,0.9,0.9,1362.0,0.9,0.0,0.0
 clip_vit_b32,unfiltered,A5,A,1.0,1.0,134.0,1.0,0.0,0.0
 clip_vit_b32,unfiltered,B1,B,0.9,1.0,112.0,0.0,0.9,1.0
-clip_vit_b32,unfiltered,B2,B,0.7,0.9,303.0,0.1,0.6,0.8
+clip_vit_b32,unfiltered,B2,B,0.1,0.9,303.0,0.1,0.0,0.8
 clip_vit_b32,unfiltered,B3,B,0.5,0.5,622.0,0.3,0.2,0.2
 clip_vit_b32,unfiltered,B4,B,0.4,0.9,379.0,0.5,-0.09999999999999998,0.4
 clip_vit_b32,unfiltered,B5,B,0.8,0.9,2038.0,0.9,-0.09999999999999998,0.0
