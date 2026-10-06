@@ -87,24 +87,23 @@ B2,2,"black oxford shirt with red and white stripes, vertical and horizontal",ma
 B2,2,blue and white striped oxford shirt,match
 B2,2,gold and white stripe shirt,match
 B2,2,lauren by ralph lauren navy and white stripe shirt,match
-B2,2,navy and white striped longsleeve shirt,match
-B2,2,navy shirt with white horizontal stripes,match
-B2,2,orange and blue horizontally striped shirt,match
-B2,2,orange and white horizontally striped shirt,match
 B2,2,"polo ralph lauren lilac, green, red, and navy horizontally striped oxford shirt",match
 B2,2,polo ralph lauren multicolored striped shirt,match
-B2,2,red and white horizontal stripe longsleeve shirt,match
 B2,2,red and white striped oxford shirt,match
-B2,2,"red, white, yellow, and blue striped shirt",match
 B2,2,"white and blue horizontally striped shirt, with denim pockets",match
 B2,2,white and gray vertical striped oxford,match
 B2,2,white oxford shirt with olive and blue stripes,match
 B2,2,"white oxford shirt with red, blue, and yellow vertical stripes",match
 B2,2,white oxford shirt with vertical black stripes,match
-B2,2,white shirt with black horizontal stripes,match
-B2,2,white shirt with navy stripes,match
 B2,2,"white shirt with red, blue, and yellow vertical stripes",match
+B2,1,cropped at chest navy t-shirt with white horizontal stripes,"striped tee, not shirt"
+B2,1,navy and white striped longsleeve t-shirt,"striped tee, not shirt"
+B2,1,orange and blue horizontally striped t-shirt,"striped tee, not shirt"
 B2,1,"red and white striped t shirt, cropped at chest","striped tee, not shirt"
+B2,1,"red, white, yellow, and blue striped t-shirt","striped tee, not shirt"
+B2,1,washed red and white horizontally striped long sleeve t-shirt,"striped tee, not shirt"
+B2,1,white t-shirt with black horizontal stripes,"striped tee, not shirt"
+B2,1,white t-shirt with navy stripes,"striped tee, not shirt"
 B2,1,"white long sleeve shirt with black horizontal stripes, but has turtle neck","striped top, not shirt"
 B2,0,"wrong garment, striped dress under a plaid shirt",wrong garment: dress
 B2,0,"wrong garment, striped poncho or jacket",wrong garment: outerwear
