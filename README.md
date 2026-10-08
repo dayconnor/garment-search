@@ -11,9 +11,10 @@ of garments, and style? The evaluation was pre-registered: the 20 test queries,
 their relevance criteria, the metrics, the pass thresholds and six predicted
 failure modes were committed to [`docs/eval_protocol.md`](docs/eval_protocol.md) before the first image was embedded.
 
-**FashionCLIP retrieves better on most queries (capped recall@10 of 0.612
-against 0.488), and both models fail on compositional queries and on fit words
-like "baggy" and "oversized".** Hand judging also showed that Fashionpedia's own
+**FashionCLIP retrieves better overall (capped recall@10 of 0.612 against
+0.488). Both models fail on compositional queries, and fit words are
+unreliable: neither model returns a clearly oversized blazer, and CLIP mostly
+ignores "baggy".** Hand judging also showed that Fashionpedia's own
 labels miss a large share of correct results: of the judged images the metadata
 counted as irrelevant, 28% were clearly relevant.
 

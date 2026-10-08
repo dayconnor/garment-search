@@ -44,7 +44,8 @@ Text-to-image search over 45,622 Fashionpedia images with exact FAISS cosine sea
 runs against both models, FashionCLIP on the left and CLIP ViT-B/32 on the right.
 
 On the pre-registered query set, FashionCLIP reached a capped recall@10 of 0.612 against 0.488 for
-CLIP. Both models failed on compositional queries and on fit words like "baggy" and "oversized".
+CLIP. Both models failed on compositional queries, neither returned a clearly oversized blazer,
+and CLIP mostly ignored "baggy".
 Queries typed here are live and are not part of that evaluation.
 
 [Full write-up](https://connor.day/projects/garment-search)
